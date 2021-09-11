@@ -1,0 +1,92 @@
+MASTER DATA STRUCTURE AND ALGORITHM WITH C++
+DAY-1   ASSIGNMENT
+*********************************************************************************
+
+
+1)	What is the time complexity of the following code?
+
+int a=0;
+for(int i = 0; i < n; i++)
+{
+     for(int j = n; j > i; j--)
+     {
+          a = a + i + j;
+      }
+ }
+
+ANSWER
+
+The above code runs total no of times  
+= n + (n – 1) + (n – 2) + … 1 + 0 
+= n * (n + 1) / 2 
+= 1/2 * n2 + 1/2 * n  
+The time complexity of the following code is O(n2)   times.
+
+
+*********************************************************************************
+
+
+2)	What is the time complexity of the following code?
+int count = 0;
+for (int i = 1; i <= n; i*2)
+    {
+         for (int j = 1; j <= i; j++)
+             {
+                  count = count + 1;
+             }     
+    }
+
+ANSWER
+
+The above code runs total no of times  
+= 1+2+4+8+16+32+64+128+……..+2n-1
+= 20+21+22+23+24+25+26+27+…..+2n-1
+
+From sum of Geometric Series , we get
+= 1*(1-2n)/(1-2)
+= (1-2n)/(-1)
+= (2n-1)/1
+= 2n - 1
+The time complexity of the following code is O(log n)   times.
+
+
+*********************************************************************************
+
+
+
+3)	Find the best case, average case and worst case of the Linear search algorithm.
+
+
+ANSWER
+
+
+ALGORITHM:-
+Linear Search (A, N, Val)
+Step 1: [Initialize] Set POS = -1
+Step 2: [Initialize] Set I = 1
+Step 3: Repeat Step 4 While I<=N
+Step 4: If A[I] = Val
+Set POS = I
+Print POS
+go to Step 6
+[end of if]
+Set I = I + 1
+[end of loop]
+Step 5: If POS = -1
+Print " Value is not presenting the array "
+[end of if]
+Step 6: Exit
+
+
+In linear search, we observed that when counting comparisons:
+
+Best case is -  1
+Worst case is -  n 
+Average case is - (n+1)/2 = ½ n + ½
+
+In big-O terminology, we would say this about linear search:
+Best case time is O(1)
+Worst case time is O(n)
+Average case time is O(n)
+
+
